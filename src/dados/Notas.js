@@ -1,0 +1,29 @@
+export default class ArrayDeNotas{
+
+    constructor()
+    {
+        this.notas = [];
+    }
+
+    addNota(titulo, texto, categoria)
+    {
+        const novaNota = new Nota(titulo, texto, categoria);
+        this.notas.push(novaNota);
+    }
+
+
+    deletaNota(indice)
+    {
+        this.notas.splice(indice, 1);
+    }
+
+}
+
+class Nota{
+    constructor(titulo, texto, categoria)
+    {
+        this.titulo = titulo;
+        this.texto = texto;
+        this.categoria = categoria;
+    }
+}
